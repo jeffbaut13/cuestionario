@@ -1,0 +1,172 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+@font-face {
+	font-family: 'Glaciar Regular';
+	src: url(./fuentes/GlacialIndifference-Regular.otf);
+  }
+  
+  @font-face {
+	font-family: 'Glaciar Bold';
+	src: url(./fuentes/GlacialIndifference-Bold.otf);
+  }
+body {
+	font-size: 16px;
+}
+
+#loader div img {
+	width: 100%;
+	height: auto;
+}
+
+#loader {
+	position: fixed;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	background-color: #ffffff;
+	height: 100vh;
+	width: 100%;
+	z-index: 999;
+}
+
+#loader div {
+	border: 20px solid transparent;
+	height: auto;
+	width: auto;
+	border-radius: 50%;
+	animation: spin1 3s linear infinite;
+}
+
+.container {
+	max-width: 500px;
+	margin: 0 auto;
+}
+.container h1 {
+	font-size: 3rem;
+}
+
+#loader div img {
+    animation: fadeinout 4s linear forwards;
+}
+
+@keyframes fadeinout {
+  0%,100% { opacity: 0; }
+  50% { opacity: 1; }
+}
+
+button {
+	display: inherit;
+	padding: 2% 5%;
+	border: none;
+	background-color: blue;
+	color: white;
+	border-radius: 50px;
+	font-size: 3rem;
+	font-family: 'Glaciar Bold';
+  }
+
+.text-container button {
+    position: inherit;
+    padding: 1%;
+    font-size: 1rem;
+}
+span.text {
+    max-width: 700px;
+    color: white;
+    font-size: 2.5rem;
+    font-family: 'Glaciar Regular';
+    text-align: start;
+}
+.container-text{
+	background-position:center;
+	background-repeat:no-repeat;
+	background-size:cover;
+	width:100%;
+	height:100vh;
+}
+#loader button {
+	display: inherit;
+	position: absolute;
+	margin: auto;
+	animation: fadein 1s linear forwards;
+	animation-delay: 3.5s;
+	opacity: 0;
+	padding: 2% 5%;
+	border: none;
+	background-color: blue;
+	color: white;
+	border-radius: 50px;
+	font-size: 3rem;
+	font-family: 'Glaciar Bold';
+  }  
+  @keyframes fadein {
+	0% {
+	  opacity: 0;
+	}
+	100% {
+	  opacity: 1;
+	}
+  }
+
+  /* Pregunta Uno */
+  .absolute{
+	position: absolute;
+	background-position:center;
+	background-repeat:no-repeat;
+	background-size:cover;
+	width:100%;
+	height:100vh;
+	overflow: hidden;
+}
+.animated { 
+		background-repeat: no-repeat;
+		background-position: center center;
+		-webkit-animation-duration: 1s;
+		animation-duration: 1s; 
+		-webkit-animation-fill-mode: both;
+		animation-fill-mode: both; 
+	 }
+	 
+	 @-webkit-keyframes bounceIn {
+		0% {
+		   opacity: 0;
+		   -webkit-transform: scale(1.03);
+		}
+		50% {
+		   opacity: 1;
+		   -webkit-transform: scale(1.05);
+		}
+		70% {
+		   -webkit-transform: scale(.9);
+		}
+		100% {
+		   -webkit-transform: scale(1);
+		}
+	 }
+	 
+	 @keyframes bounceIn {
+		0% {
+		   opacity: 0;
+		   transform: scale(.3);
+		}
+		50% {
+		   opacity: 1; 
+		   transform: scale(1.05);
+		}
+		70% {
+		   transform: scale(.9);
+		}
+		100% {
+		   transform: scale(1);
+		}
+	 }
+	 
+	 .bounceIn {
+		-webkit-animation-name: bounceIn; 
+		animation-name: bounceIn;
+	 }
