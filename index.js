@@ -67,7 +67,7 @@ else if (objetoPregunta === baseDePreguntas[2]) {
 }
 else if (objetoPregunta === baseDePreguntas[3]) {
   let validezRespuesta = opciones[index] == objetoPregunta.respuesta;
-  document.querySelector('#tablero-de-juego').style.backgroundImage = "url('/img/Fondo-verde.gif')";
+  document.querySelector('#tablero-de-juego').style.backgroundImage = "url('./img/Fondo-verde.gif')";
   if (validezRespuesta) {
     await preguntaTres();
     cargaTres();
