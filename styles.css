@@ -89,6 +89,9 @@ span.text {
 	width:100%;
 	height:100vh;
 }
+.z-index {
+    z-index: 1000;
+}
 #loader button {
 	display: inherit;
 	position: absolute;
@@ -123,7 +126,7 @@ span.text {
 	height:100vh;
 	overflow: hidden;
 }
-.animated { 
+/* .animated { 
 		background-repeat: no-repeat;
 		background-position: center center;
 		-webkit-animation-duration: 1s;
@@ -169,4 +172,4 @@ span.text {
 	 .bounceIn {
 		-webkit-animation-name: bounceIn; 
 		animation-name: bounceIn;
-	 }
+	 } */
