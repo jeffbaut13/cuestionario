@@ -1,7 +1,3 @@
-* {
-  transition: all 0.25s;
-}
-
 @font-face {
 	font-family: 'Glaciar Regular';
 	src: url(./fuentes/GlacialIndifference-Regular.otf);
@@ -62,3 +58,13 @@ body {
   color: aquamarine;
 }
 
+.conoce-resultado {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+span#resultado-boton {
+  color: white;
+  font-size: 2rem;
+}
