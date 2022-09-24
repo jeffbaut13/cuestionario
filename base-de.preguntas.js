@@ -1,10 +1,9 @@
-
 let baseDePreguntas = [
 
   {
     pregunta: "¿Que residuos tirarías en la bolsa blanca de reciclaje?",
     ayuda:"territorio",
-    respuesta: "<i class='fa-solid fa-circle'></i><span style='padding-left:4%;'><strong>Botellas de agua,</strong> cartón, vidrio, metal</span>",
+    respuesta: "<i class='fa-solid fa-circle'></i><span style='padding-left:4%;'><strong>Botellas </strong>de agua, cartón, vidrio, metal</span>",
     distractores: [
       "<i class='fa-solid fa-circle'></i><span style='padding-left:4%;'><strong>Residuos</strong> de comida, cascaras de huevo</span>", 
       "<i class='fa-solid fa-circle'></i><span style='padding-left:4%;'><strong>Servilletas</strong> usadas y papel higiénico</span>",
@@ -21,21 +20,21 @@ let baseDePreguntas = [
     ]
   },
   {
-    pregunta: "¿Por que crees que una botella de colores tienes retos en el reciclaje?",
+    pregunta: "¿Por que crees que una botella que no es transparente tiene retos en el reciclaje?",
     respuesta: "<i class='fa-solid fa-circle'></i><span style='padding-left:4%;'>por su <strong>color</strong></span>",
     distractores: [
       "<i class='fa-solid fa-circle'></i><span style='padding-left:4%;'>Por el <strong>material</strong></span>", 
-      "<i class='fa-solid fa-circle'></i><span style='padding-left:4%;'>Porque esta <strong>sucia</strong></span>",
+      "<i class='fa-solid fa-circle'></i><span style='padding-left:4%;'>Porque está <strong>sucia</strong></span>",
       "<i class='fa-solid fa-circle'></i><span style='padding-left:4%;'>Por su <strong>contenido</strong></span>"
     ],
   },
   {
     pregunta: "¿Por que crees que las botellas de aceite tienen retos en su reciclaje?",
-    respuesta: "<i class='fa-solid fa-circle'></i><span style='padding-left:4%;'>por su <strong>color</strong></span>",
+    respuesta: "<i class='fa-solid fa-circle'></i><span style='padding-left:4%;'>Porque quedan impregnadas de <strong>aceite</strong></span>",
     distractores: [
-      "<i class='fa-solid fa-circle'></i><span style='padding-left:4%;'>Porque quedan inpregnadas de <strong>aceite</strong></span>", 
       "<i class='fa-solid fa-circle'></i><span style='padding-left:4%;'>Por el <strong>material</strong></span>",
-      "<i class='fa-solid fa-circle'></i><span style='padding-left:4%;'>Porque existe<strong>poco inventario </strong>en Colombia</span>"
+      "<i class='fa-solid fa-circle'></i><span style='padding-left:4%;'>Porque existe <strong>poco inventario </strong>en Colombia</span>",
+      "<i style='display:none;' class='fa-solid fa-circle'></i><span style='display:none;padding-left:4%;'></span>"
     ],
   },
   {
@@ -52,7 +51,7 @@ let baseDePreguntas = [
     respuesta: "<i class='fa-solid fa-circle'></i><span style='padding-left:4%;'>Son incinerados y <strong>generan contaminación</strong></span>",
     distractores: [
       "<i class='fa-solid fa-circle'></i><span style='padding-left:4%;'><strong>No pasa nada,</strong> los residuos se degradan solos</span>", 
-      "<i class='fa-solid fa-circle'></i><span style='padding-left:4%;'><strong>Los tiran al agua y la </strong>contaminan</span>", 
+      "<i class='fa-solid fa-circle'></i><span style='padding-left:4%;'>Los tiran al agua y la <strong>contaminan</strong></span>", 
       "<i style='display:none;' class='fa-solid fa-circle'></i><span style='display:none;padding-left:4%;'></span>"
     ],
   },
@@ -71,6 +70,15 @@ let baseDePreguntas = [
     distractores: [
       "<i class='fa-solid fa-circle'></i><span style='padding-left:4%;'>Reciclador - Molino y lavado - Resinas de <strong>Andercol</strong></span>", 
       "<i class='fa-solid fa-circle'></i><span style='padding-left:4%;'>Reciclador - Molino y lavado - Bodega de reciclaje - Resinas de <strong>Andercol</strong></span>", 
+      "<i style='display:none;' class='fa-solid fa-circle'></i><span style='display:none;padding-left:4%;'></span>"
+    ],
+  },
+  {
+    pregunta: "EL RECICLAJE ES EL CAMINO",
+    respuesta: "<div class='conoce-resultado'><button style='font-size:2rem;'>Conoce tu resultado</button></div>",
+    distractores: [
+      "<i style='display:none;' class='fa-solid fa-circle'></i><span style='display:none;padding-left:4%;'></span>", 
+      "<i style='display:none;' class='fa-solid fa-circle'></i><span style='display:none;padding-left:4%;'></span>", 
       "<i style='display:none;' class='fa-solid fa-circle'></i><span style='display:none;padding-left:4%;'></span>"
     ],
   },
