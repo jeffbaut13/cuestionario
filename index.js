@@ -20,75 +20,112 @@ function cargarPregunta(index) {
     document.getElementById("opcion-4").innerHTML = opciones[3];
   
 }
-let resultadoError = function() {
-  document.querySelector('#error').style.display = 'block';;
+/* Pregunta Correcta */
+let cargaCorrecta = function() {
+  mostrar('#correcto', 50);
+	document.querySelector('.correcto').style.display = 'block';
 }
-let preguntaUno = function() {
-	document.querySelector('.uno').style.display = 'block';
+/* Pregunta Erronea */
+let cargaError = function() {
+	mostrar('#error', 50);
+	document.querySelector('.error').style.display = 'block';
 }
-let preguntaDos = function() {
-	document.querySelector('.dos').style.display = 'block';
-}
-let preguntaTres = function() {
-	document.querySelector('.tres').style.display = 'block';
-}
-async function seleccionarOpción(index) {
 
-  if (objetoPregunta === baseDePreguntas[0] ) {
-    let validezRespuesta = opciones[index] == objetoPregunta.respuesta;
-    if (validezRespuesta) {
-      await cargaUno();
-      preguntaUno();
-      puntaje++;
-    } else {
-      await resultadoError();
-    }
+
+function seleccionarOpción(index) {
+  
+if (objetoPregunta === baseDePreguntas[0] ) {
+  let validezRespuesta = opciones[index] == objetoPregunta.respuesta;
+  if (validezRespuesta) {
+    cargaCorrecta();
+    puntaje++;
+  } else {
+    cargaError();
+  }
 }
-  else if (objetoPregunta === baseDePreguntas[1]) {
-    let validezRespuesta = opciones[index] == objetoPregunta.respuesta;
-    if (validezRespuesta) {
-      await preguntaDos();
-      cargaDos();
-      puntaje++;
-    } else {
-      await resultadoError();
-    }
+else if (objetoPregunta === baseDePreguntas[1] ) {
+  let validezRespuesta = opciones[index] == objetoPregunta.respuesta;
+  document.querySelector('#showtwo').style.display = 'block';
+  if (validezRespuesta) {
+    cargaCorrecta();
+    puntaje++;
+  } else {
+    cargaError();
+  }
 }
 else if (objetoPregunta === baseDePreguntas[2]) {
   let validezRespuesta = opciones[index] == objetoPregunta.respuesta;
-  /* document.querySelector('#tablero-de-juego').style.backgroundImage = "url('/img/Fondo-azul.gif')"; */
+  document.querySelector('#showthree').style.display = 'block';
   if (validezRespuesta) {
-    await preguntaTres();
-    cargaTres();
-    
+    cargaCorrecta();
+    puntaje++;
   } else {
-    await resultadoError();;
+    cargaError();
   }
 }
 else if (objetoPregunta === baseDePreguntas[3]) {
   let validezRespuesta = opciones[index] == objetoPregunta.respuesta;
+  document.querySelector('#showfour').style.display = 'block';
+  if (validezRespuesta) {
+    cargaCorrecta();
+    puntaje++;
+  } else {
+    cargaError();
+  }
+}
+else if (objetoPregunta === baseDePreguntas[4]) {
+  let validezRespuesta = opciones[index] == objetoPregunta.respuesta;
+  document.querySelector('#showfive').style.display = 'block';
   document.querySelector('#tablero-de-juego').style.backgroundImage = "url('./img/Fondo-verde.gif')";
   if (validezRespuesta) {
-    await preguntaTres();
-    cargaTres();
-    
+    cargaCorrecta();
+    puntaje++;
   } else {
-    await resultadoError();;
+    cargaError();
+  }
+}
+else if (objetoPregunta === baseDePreguntas[5]) {
+  let validezRespuesta = opciones[index] == objetoPregunta.respuesta;
+  document.querySelector('#showsix').style.display = 'block';
+  if (validezRespuesta) {
+    cargaCorrecta();
+    puntaje++;
+  } else {
+    cargaError();
+  }
+}
+else if (objetoPregunta === baseDePreguntas[6]) {
+  let validezRespuesta = opciones[index] == objetoPregunta.respuesta;
+  document.querySelector('#showseven').style.display = 'block';
+  if (validezRespuesta) {
+    cargaCorrecta();
+    puntaje++;
+  } else {
+    cargaError();
+  }
+}
+else if (objetoPregunta === baseDePreguntas[7]) {
+  let validezRespuesta = opciones[index] == objetoPregunta.respuesta;
+  document.querySelector('#showeigth').style.display = 'block';
+  if (validezRespuesta) {
+    cargaCorrecta();
+    puntaje++;
+  } else {
+    cargaError();
   }
 }
   INDEX_PREGUNTA++;
   if (INDEX_PREGUNTA >= baseDePreguntas.length) {
-    await Swal.fire({
-      title: "Juego términado",
-      text: `Tu puntaje fue de: ${puntaje}/${baseDePreguntas.length}`,
-    });
+    document.querySelector('#resultado').style.display = 'block'; 
+    let resultado = document.querySelector('#resultado-boton')
+    resultado.innerHTML +=     
+    
+    `<p><strong>EL RECICLAJE ES EL CAMINO</strong></p>
+    <p>Tu puntaje fue de: ${puntaje}/${baseDePreguntas.length}</p>
+    <button id="resultado-boton" onclick="intetarDeNuevo()">Intentar de nuevo</button>`
+    
     INDEX_PREGUNTA = 0;
     puntaje = 0;
   }
   cargarPregunta(INDEX_PREGUNTA);
-
-  
-
-  
 }
-
