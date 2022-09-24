@@ -3,20 +3,13 @@
 
 <head>
      <title>Juego de preguntas</title>
-
      <meta charset="UTF-8">
      <meta http-equiv="X-UA-Compatible" content="IE=edge">
      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css">
-
      <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.3.0/dist/sweetalert2.all.min.js"></script>
-
      <script src="https://kit.fontawesome.com/de7cfeb0c3.js" crossorigin="anonymous"></script>
-
      <link rel="stylesheet" href="index.css">
-     
-
      <meta property="og:site_name" content="Juego de preguntas">
      <meta property="og:title" content="Juego de preguntas">
      <meta property="og:description" content="versión 2">
@@ -25,106 +18,185 @@
 </head>
 
 <body>
+     <!-- carga preloader del logo -->
      <div id="loader">
           <div>
-            <img src="./img/andercol.png" alt="">
+               <img src="./img/andercol.png" alt="">
           </div>
           <button onclick="empezarEncuesta()">Iniciar</button>
      </div>
 
-     <div id="error" class="absolute" style="display:none;">
+     <!-- primera pregunta -->
+     <main class="error z-index text-container absolute" id="error" style="display:none;">
           <div class="absolute" style="width: 100%;height: 100vh;background-color: #371b1c;">
-               <div class="animated bounceIn absolute d-flex flex-column justify-content-center align-items-center" style="text-align:center;font-size:2rem;background-image:url('./img/Incorrecto.svg');">    
-                    <span style="max-width:500px;font-family: Glaciar Bold;color:white"> Has fallado te invitamos a Intenar de nuevo el cuestionario</span>
-                    <button class="animated bounceIn" onclick="intetarDeNuevo()"> Intentar de nuevo</button>
+               <div class="animated bounceIn absolute" style="background-image:url('./img/Incorrecto.svg');">
+
                </div>
-           </div>
-     </div>   
-
-     <main class="uno text-container absolute" id="showone" style="display:none;" onclick="displayNone()">
-          <div id="uno">
-              <div class="absolute" style="width: 100%;height: 100vh;background-color: #adffa3;">
-                  <div class="animated bounceIn absolute" style="background-image:url('./img/Correcto.svg');">    
-                    
-                  </div>
-              </div>
           </div>
-      </main>
+     </main>
 
-      <main class="dos text-container absolute" id="showtwo" style="display:none;">
-          <div id="dos">
-              <div class="absolute" style="width: 100%;height: 100vh;background-color: #adffa3;">
-                  <div class="animated bounceIn absolute" style="background-image:url('./img/Correcto.svg');">    
-                    
-                  </div>
-              </div>
+
+     <main class="correcto z-index text-container absolute" id="correcto" style="display:none;">
+          <div class="absolute" style="width: 100%;height: 100vh;background-color: #adffa3;">
+               <div class="animated bounceIn absolute" style="background-image:url('./img/Correcto.svg');">
+               </div>
           </div>
+     </main>
+
+     <!-- segunda pregunta -->
+
+
+     <main class="dos text-container absolute" id="showtwo" style="display:none;">
           <div id="none">
-               <div class="container-text d-flex flex-column justify-content-center align-items-center" style="background-image:url('/img/Fondo-azul-INFO.gif');">
-               <span class="text">
-                    Son residuos que se reciclan poco porque tienen <strong>baja comercialización. <span style="font-family:'Glaciar Bold';color: rgb(3, 3, 71);">Andercol</span></strong> esta trabajando para su aprovechamiento en la <strong>fabricación de resinas.</strong>
+               <div class="container-text d-flex flex-column justify-content-center align-items-center"
+                    style="background-image:url('/img/Fondo-azul-INFO.gif');">
+                    <span class="text">
+                         Son residuos que se reciclan poco porque tienen <strong>baja comercialización. <span
+                                   style="font-family:'Glaciar Bold';color: rgb(3, 3, 71);">Andercol</span></strong>
+                         esta trabajando para su aprovechamiento en la <strong>fabricación de resinas.</strong>
+                         <button onclick="siguientePRegunta()">Siguiente Pregunta</button>
+                    </span>
+               </div>
+          </div>
+     </main>
+
+
+     <!-- Tercera pregunta -->
+     <main class="tres text-container absolute" id="showthree" style="display:none;">
+          <div id="none">
+               <div class="container-text d-flex flex-column justify-content-center align-items-center"
+                    style="background-image:url('/img/Fondo-azul-INFO.gif');">
+                    <span class="text">
+                         <strong>Hoy el reto es su color, </strong>en <span
+                              style="font-family:'Glaciar Bold';color: rgb(3, 3, 71);">Andercol</span></strong>
+                              actualmente estamos incorporándolo en nuestras resinas y trabajando en la 
+                         <strong>decoloración</strong> para el <strong>aprovechamiento</strong> del PET en la
+                         <strong>fabricación de nuestras resinas.</strong>
+                         <button onclick="siguientePRegunta()">Siguiente Pregunta</button>
+                    </span>
+               </div>
+          </div>
+     </main>
+     <!-- cuarta pregunta -->
+     <main class="four text-container absolute" id="showfour" style="display:none;">
+          <div id="none">
+               <div class="container-text d-flex flex-column justify-content-center align-items-center"
+                    style="background-image:url('/img/Fondo-azul-INFO.gif');">
+                    <span class="text">Hoy el reto es que las botellas están impregnadas de aceite.
+                         Desde </strong><span
+                              style="font-family:'Glaciar Bold';color: rgb(3, 3, 71);">Andercol</span></strong>
+                              estamos
+                              trabajando en su <strong>limpieza</strong> para el 
+                         <strong>aprovechamiento</strong> del PET en la 
+                         <strong>fabricación de resinas.</strong>
+                         <button onclick="siguientePRegunta()">Siguiente Pregunta</button>
+                    </span>
+               </div>
+          </div>
+     </main>
+
+     <!-- Quinta pregunta -->
+     <main class="five text-container absolute" id="showfive" style="display:none;">
+          <div id="none">
+               <div class="container-text d-flex flex-column justify-content-center align-items-center"
+                    style="background-image:url('/img/Fondo-azul-INFO.gif');">
+                    <span class="text">Actualmente es difícil reciclarlo
+                         porque
+                    <strong> no se puede mezclar con
+                         el PET en el proceso de molido.
+                         Desde </strong><span
+                         style="font-family:'Glaciar Bold';color: rgb(3, 3, 71);">Andercol</span></strong>
+                         estamos
+                         trabajando para hacer posible el
+                         aprovechamiento de este residuo
+                         en la
+                    <strong>fabricación de resinas.</strong>
                     <button onclick="siguientePRegunta()">Siguiente Pregunta</button>
                </span>
                </div>
-           </div>
-      </main>
-
-      <main class="tres text-container absolute" id="showthree" style="display:none;">
-          <div id="tres">
-              <div class="absolute" style="width: 100%;height: 100vh;background-color: #adffa3;">
-                  <div class="animated bounceIn absolute" style="background-image:url('./img/Correcto.svg');">    
-                    
-                  </div>
-              </div>
           </div>
+     </main>
+     <!-- Sexta pregunta -->
+     <main class="six text-container absolute" id="showsix" style="display:none;">
           <div id="none">
-               <div class="container-text d-flex flex-column justify-content-center align-items-center" style="background-image:url('./img/Fondo-azul-INFO.gif');">
-               <span class="text">
-                    <strong>Hoy el reto es su color,</strong> en <span style="font-family:'Glaciar Bold';color: rgb(3, 3, 71);">Andercol</span></strong> actualmente estamos incorporándolo en nuestras resinas y trabajando en la <strong>decoloración</strong> para el <strong>aprovechamiento</strong> del PET en la <strong>fabricación de nuestras resinas.</strong> 
-                    <button onclick="siguientePRegunta()">Siguiente Pregunta</button>
-               </span>
+               <div class="container-text d-flex flex-column justify-content-center align-items-center"
+                    style="background-image:url('/img/Fondo-verde-INFO.gif');">
+                    <span class="text">Cuando los residuos llegan a los vertederos <strong>son incinerados y generan gases nocivos </strong>para el medioambiente.
+                         <button onclick="siguientePRegunta()">Siguiente Pregunta</button>
+                    </span>
                </div>
-           </div>
-      </main>
-     
-          
-        
+          </div>
+     </main>
+     <!-- Septima pregunta -->
+     <main class="seven text-container absolute" id="showseven" style="display:none;">
+          <div id="none">
+               <div class="container-text d-flex flex-column justify-content-center align-items-center"
+                    style="background-image:url('/img/Fondo-verde-INFO.gif');">
+                    
+                    <span class="text">Según datos suministrados por
+                         la <strong>Superintendencia de Servicios
+                         Públicos,</strong> más de <strong>40.000
+                         recicladores</strong> de oficio han sido
+                         identificados.
+                         <button onclick="siguientePRegunta()">Siguiente Pregunta</button>
+                    </span> 
+                    
+               </div>
+          </div>
+     </main>
+     <!-- Septima pregunta -->
+     <main class="eigth text-container absolute" id="showeigth" style="display:none;">
+          <div id="none">
+               <div class="container-text d-flex flex-column justify-content-center align-items-center"
+                    style="background-image:url('/img/Fondo-verde-INFO.gif');">
+                    <span class="text">Cuando los residuos <strong>se reciclan, los convertimos en resina para la fabricación</strong> de lavamanos, lavaplatos, buses, tubos, tejas, etc.
+                         <button onclick="siguientePRegunta()">Siguiente Pregunta</button>
+                    </span>
+               </div>
+          </div>
+     </main>
+     <!-- Resultado -->
+     <main class="resultado text-container absolute" id="resultado" style="display:none;">
+          <div id="none">
+               <div class="container-text d-flex flex-column justify-content-center align-items-center"
+                    style="background-image:url('/img/Fondo-verde-INFO.gif');">
+                    <span class="d-flex flex-column justify-content-center align-items-center" id="resultado-boton">
+
+                    </span>
+               </div>
+          </div>
+     </main>
+
+     <!-- esqueleto de las preguntas -->
 
      <div id="tablero-de-juego" style="background-image:url('/img/Fondo-azul.gif');">
 
           <div id="encabezado">
-
                <span id="pregunta">Aquí va la pregunta</span>
                <br>
-
-               
           </div>
 
-          
           <div class="opcion" id="opcion-1" onclick="seleccionarOpción(0)">
                Opción 1
           </div>
+
           <div class="opcion" id="opcion-2" onclick="seleccionarOpción(1)">
                Opción 2
           </div>
+
           <div class="opcion" id="opcion-3" onclick="seleccionarOpción(2)">
                Opción 3
           </div>
+
           <div class="opcion" id="opcion-4" onclick="seleccionarOpción(3)">
                Opción 4
           </div>
-
      </div>
-     <script src="./script.js"></script> 
-     <script src="base-de.preguntas.js"></script>
+
+     <script src="./script.js"></script>
+     <script src="./base-de.preguntas.js"></script>
      <script defer src="index.js"></script>
 
 </body>
 
 </html>
-
-<!-- 
-https://i.ibb.co/5kqDNHN/Fondo-azul.gif
-https://i.ibb.co/827SKJ3/Fondo-azul-INFO.gif
-https://i.ibb.co/zHwHpK3/Fondo-verde.gif
-https://i.ibb.co/3FrfXgq/Fondo-verde-INFO.gif -->
