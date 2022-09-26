@@ -21,12 +21,12 @@ function cargarPregunta(index) {
 }
 /* Pregunta Correcta */
 let cargaCorrecta = function() {
-  mostrar('#correcto', 100);
+  mostrar('#correcto', 1500);
 	document.querySelector('.correcto').style.display = 'block';
 }
 /* Pregunta Erronea */
 let cargaError = function() {
-	mostrar('#error', 100);
+	mostrar('#error', 1500);
 	document.querySelector('.error').style.display = 'block';
 }
 
@@ -75,7 +75,7 @@ else if (objetoPregunta === baseDePreguntas[3]) {
 else if (objetoPregunta === baseDePreguntas[4]) {
   let validezRespuesta = opciones[index] == objetoPregunta.respuesta;
   document.querySelector('#showfive').style.display = 'block';
-  document.querySelector('#tablero-de-juego').style.backgroundImage = "url('./img/Fondo-verde.gif')";
+  document.querySelector('#tablero-de-juego').style.backgroundImage = "url('../img/Fondo-verde.gif')";
   if (validezRespuesta) {
     cargaCorrecta();
     puntaje++;

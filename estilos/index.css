@@ -9,6 +9,9 @@
 }
 
 @media (min-width:1023px){
+	.intro{
+		background-image:url('../img/Fondo-azul.gif');
+	}
 	.correcto{
 		background-image: url('../img/Correcto.gif');
 	}
@@ -16,16 +19,16 @@
 		background-image: url('../img/INCorrecto.gif');
 	}
 	.back-blue{
-		background-image:url('/img/Fondo-azul-INFO.gif');
+		background-image:url('../img/Fondo-azul-INFO.gif');
 	}
 	.back-green{
-		background-image:url('/img/Fondo-verde-INFO.gif');
+		background-image:url('../img/Fondo-verde-INFO.gif');
 	}
 	.ultimaR{
-		background-image:url('/img/ultimaR.gif');
+		background-image:url('../img/ultimaR.gif');
 	}
 	.resultado{
-		background-image:url('/img/resultado.gif');
+		background-image:url('../img/resultado.gif');
 	}
 }
 
