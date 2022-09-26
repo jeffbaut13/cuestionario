@@ -48,7 +48,7 @@ let baseDePreguntas = [
   },
   {
     pregunta: "¿Sabes que pasa con los residuos que están quedando en los rellenos sanitarios?",
-    respuesta: "<i class='fa-solid fa-circle'></i><span style='padding-left:4%;'>Son incinerados y <strong>generan contaminación</strong></span>",
+    respuesta: "<i class='fa-solid fa-circle'></i><span style='padding-left:4%;'>Generan <strong>contaminación ambiental</strong></span>",
     distractores: [
       "<i class='fa-solid fa-circle'></i><span style='padding-left:4%;'><strong>No pasa nada,</strong> los residuos se degradan solos</span>", 
       "<i class='fa-solid fa-circle'></i><span style='padding-left:4%;'>Los tiran al agua y la <strong>contaminan</strong></span>", 

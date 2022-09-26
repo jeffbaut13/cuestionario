@@ -8,10 +8,9 @@ function cargarPregunta(index) {
 
   opciones = [...objetoPregunta.distractores];
   opciones.push(objetoPregunta.respuesta);
-  for (let i = 0; i < length; i++) {
-    opciones.sort(() => Math.random() - 0.5);
-  }
-
+  
+  opciones.sort(() => Math.random() - 0.5);
+  
   document.getElementById("pregunta").innerHTML = objetoPregunta.pregunta;
 
     document.getElementById("opcion-1").innerHTML = opciones[0];
@@ -22,12 +21,12 @@ function cargarPregunta(index) {
 }
 /* Pregunta Correcta */
 let cargaCorrecta = function() {
-  mostrar('#correcto', 1000);
+  mostrar('#correcto', 1500);
 	document.querySelector('.correcto').style.display = 'block';
 }
 /* Pregunta Erronea */
 let cargaError = function() {
-	mostrar('#error', 1000);
+	mostrar('#error', 1500);
 	document.querySelector('.error').style.display = 'block';
 }
 
