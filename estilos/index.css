@@ -1,18 +1,80 @@
+@font-face {
+	font-family: 'Glaciar Regular';
+	src: url(../fuentes/GlacialIndifference-Regular.otf);
+}
+  
+@font-face {
+  font-family: 'Glaciar Bold';
+  src: url(../fuentes/GlacialIndifference-Bold.otf);
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #0094df;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  font-size: 120%;
+}
+
+#tablero-de-juego {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-position:center;
+  background-repeat:no-repeat;
+  background-size:cover;
+  width:100%;
+  height:100vh;
+}
+
+#encabezado {
+  max-width: 80vw;
+  min-height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  
+}
+#pregunta{
+  color: white;
+  font-family: 'Glaciar Bold';
+  font-size: 3rem;
+}
+.opcion {
+  text-align: start;
+  min-width: 300px;
+  width: 80vw;
+  font-family: 'Glaciar Regular';
+  color: white;
+  font-size: 2rem;
+  border-radius: 10px;
+  cursor: pointer;
+}
+.opcion i.fa-solid.fa-circle {
+  color: aquamarine;
+}
+
+.conoce-resultado {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+span#resultado-boton {
+  color: white;
+  font-size: 2rem;
+}
 * {
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
 }
 
-@font-face {
-	font-family: 'Glaciar Regular';
-	src: url(./fuentes/GlacialIndifference-Regular.otf);
-  }
-  
-  @font-face {
-	font-family: 'Glaciar Bold';
-	src: url(./fuentes/GlacialIndifference-Bold.otf);
-  }
 body {
 	font-size: 16px;
 }
