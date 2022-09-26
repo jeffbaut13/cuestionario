@@ -21,12 +21,12 @@ function cargarPregunta(index) {
 }
 /* Pregunta Correcta */
 let cargaCorrecta = function() {
-  mostrar('#correcto', 1500);
+  mostrar('#correcto', 100);
 	document.querySelector('.correcto').style.display = 'block';
 }
 /* Pregunta Erronea */
 let cargaError = function() {
-	mostrar('#error', 1500);
+	mostrar('#error', 100);
 	document.querySelector('.error').style.display = 'block';
 }
 

@@ -74,7 +74,7 @@ let baseDePreguntas = [
     ],
   },
   {
-    pregunta: "EL RECICLAJE ES EL CAMINO",
+    pregunta: "Excelente!",
     respuesta: "<div class='conoce-resultado'><button style='font-size:2rem;'>Conoce tu resultado</button></div>",
     distractores: [
       "<i style='display:none;' class='fa-solid fa-circle'></i><span style='display:none;padding-left:4%;'></span>", 
