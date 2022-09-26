@@ -8,9 +8,12 @@
   src: url(../fuentes/GlacialIndifference-Bold.otf);
 }
 
-@media (min-width:1023px){
+@media (min-width:1024px){
 	.intro{
 		background-image:url('../img/Fondo-azul.gif');
+	}
+	.cambio{
+		background-image: url('../img/Fondo-verde.gif')
 	}
 	.correcto{
 		background-image: url('../img/Correcto.gif');
@@ -29,6 +32,52 @@
 	}
 	.resultado{
 		background-image:url('../img/resultado.gif');
+	}
+}
+
+@media (max-width:1024px){
+	#pregunta {
+		font-size: 2rem !important;
+	}
+	.opcion {
+		font-size: 1.5rem !important;
+	}
+	.intro{
+		background-image:url('../img-responsive/Fondo-azul-movil.gif');
+	}
+	.cambio{
+		background-image: url('../img-responsive/Fondo-verde-movil.gif')
+	}
+	.correcto{
+		background-image: url('../img-responsive/Correcto-movil.gif');
+	}
+	.incorrecto{
+		background-image: url('../img-responsive/INCorrecto-movil.gif');
+	}
+	.back-blue{
+		background-image:url('../img-responsive/INFO-azul-movil.gif');
+	}
+	.back-green{
+		background-image:url('../img-responsive/INFO-verde-movil.gif');
+	}
+	.ultimaR{
+		background-image:url('../img-responsive/ultimaR-movil.gif');
+	}
+	.resultado{
+		background-image:url('../img-responsive/resultado-movil.gif');
+	}
+	span.text {
+		max-width: 400px !important;
+		font-size: 1.5rem !important;
+	}
+	.azul, .verde {
+		padding: 30px 5px 10px 40px !important;
+	}
+	#encabezado {
+		max-width: 90vw !important;
+	}
+	.translate {
+		transform: translateY(-110px);
 	}
 }
 
@@ -158,8 +207,8 @@ button {
 
 .text-container button {
     position: inherit;
-    padding: 1%;
-    font-size: 1rem;
+    padding: 1% 3%;
+    font-size: 1.5rem;
 }
 span.text {
     max-width: 700px;

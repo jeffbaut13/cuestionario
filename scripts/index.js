@@ -75,7 +75,9 @@ else if (objetoPregunta === baseDePreguntas[3]) {
 else if (objetoPregunta === baseDePreguntas[4]) {
   let validezRespuesta = opciones[index] == objetoPregunta.respuesta;
   document.querySelector('#showfive').style.display = 'block';
-  document.querySelector('#tablero-de-juego').style.backgroundImage = "url('../img/Fondo-verde.gif')";
+  let cambio = document.querySelector('#tablero-de-juego');
+  cambio.classList.remove('intro'); 
+  cambio.classList.add('cambio'); 
   if (validezRespuesta) {
     cargaCorrecta();
     puntaje++;
